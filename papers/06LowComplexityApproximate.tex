@@ -1,0 +1,14 @@
+\chapter{Low-Complexity Approximate Convolutional Neural Networks}
+
+{\small \textbf{Authors}\\
+Renato J. Cintra, \textit{Senior Member, IEEE}, Stefan Duffner, Christophe Garcia, and André Leite\\ \\
+IEEE TRANSACTIONS ON NEURAL NETWORKS AND LEARNING SYSTEMS\\VOL. 29, NO. 12, DECEMBER 2018}
+
+\section{Proposed Method}
+
+As we have already seen in most of the papers discussed, the main goal is to improve performance of our networks. In the following paper, we are going to discuss about another approach whose aim is to reduce the complexity of the CNN used. An important difference this time is that the purpose of this study is not to achieve the state-of-the-art, while it is to present an effective way to reduce a lot the number of the parameters, and by doing so, we end up with a lighter architecture that can be more easily employed by systems with limited hardware resources.\\ \\
+The basic idea in the proposed method is to replace all the multiplication operations usually performed into the convolution matrices with simple additions and bit-shifting operations. In order to achieve that, we come up with an optimization problem in which we aim at obtaining an approximated matrix $\hat{\textbf{M}}$ that will be such that $\textbf{M} \approx \hat{\textbf{M}}$. Where $\textbf{M}$ is the matrix that we would obtain without any approximation in a conventional CNN. There are a few things that would be worth saying more about. For example, the Frobenius norm is used as way to express the idea of distance seen as the difference between the two matrices abovementioned. The Frobenius norm is basically the square root of the sum of all the absolute values of our matrix, squared.
+
+\section{Experimental Results}
+
+Experimental results have been evaluated on two different applications: face detection and digit recognition. The first one is a binary classification, where we are basically trying to understand whether or not an image has a face in some region. Results show that by applying the proposed model we end up with almost the same accuracy of a baseline model such as a face detector called CFF but with fewer parameters and with operations performed optimally. The second application, digit recognition, is evaluated through the typical dataset MNIST \citep{MNIST}. Also in this case the multiplications have been replaced by additions and bit-shifting and this is translated into an approximation even better than that seen for the binary classification.

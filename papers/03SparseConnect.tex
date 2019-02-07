@@ -1,0 +1,20 @@
+\chapter{SparseConnect: regularising CNNs on fully connected layers}
+
+{\small \textbf{Authors}\\
+Qi Xu and Gang Pan\\ \\
+ELECTRONICS LETTERS\\31st August 2017 Vol. 53 No. 18 pp. 1246–1248}
+
+\section{Proposed Method}
+
+In the following paper a novel approach to deal with the overfitting problem is proposed. First of all let us say something more about the overfitting that so far has not been explained in great detail. Overfitting is due to the inability of our model to behave well in the presence of data and more specifically it is generally caused by a high number of parameters.\\ \\
+For this reason, the main goal in this paper is to propose an approach to deal with this problem by trying to sparsify connections in the fully-connected layers, which in CNNs are the only ones being connected to all the neurons. It has been seen that in related works, many tecniques of regularization have been employed to reduce overfitting. It is worth to mention Dropout, DisturbLabel, data augmentation and weight decay. To the date of this paper, no one has ever tried to perform anything on FCLs. The following method is called \textit{SparseConnect} and is divided into two steps: SparseConnect1 and SparseConnect2. In SparseConnect1, $\ell_1$ regularization is applied on the weights of the fully-connected layers. In SparseConnect2 instead, all the weights that are small enough, are set to zero in order to obtain a better sparsification. For the sake of the completeness the equation of the loss function should be provided, as there are both $\ell_1$ and $\ell_2$ regularization. The first regularization is performed only on fully-connected layers, the second one is performed on all the weights of the network in order to (if necessary) reset those near zero.
+
+\begin{equation}
+\label{eq:03_eq}
+    O(\textbf{W}) = \frac{1}{n}\sum_{i = 1}^{n}L(y_i, f(\textbf{x}_i, \textbf{W}))+\lambda_1\|\textbf{W}_\textbf{FCL}\|_1 +\lambda_2\|\textbf{W}\|_2^2
+\end{equation}\\
+In order to better manage this equation, the quantity $L(y_i, f(\textbf{x}_i, \textbf{W}))$ is how much error there is between the predicted and the true value.
+
+\section{Experimental Results}
+
+As far as the experimental results is concerned, they have been evaluated on two datasets, which are MNIST \citep{MNIST} and CIFAR10 \citep{CIFAR10and100}. In the first one, the training set is augmented by generating 10 new images doing some operations such as rotations, scaling, flipping etc. Moreover, two different networks are trained and they are used to compare results on both datasets. These two networks are LeNet-5 and CIFAR10-Net. For each of these, six different CNNs are used. The difference among them is the chosen loss function. Results obtained on these networks suggest that applying the regularization on fully-connected layers is a good way to reduce overfitting.

@@ -1,0 +1,51 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage[nottoc]{tocbibind}
+\usepackage{multicol}
+\usepackage[top=1.10in, bottom=1.10in, left=1.25in, right=1.25in]{geometry}
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage{color} 
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[titletoc]{appendix}
+\usepackage{quotchap}
+\usepackage{placeins}
+\usepackage{euscript}
+\usepackage{fixmath}
+\usepackage{amsmath}
+\usepackage{systeme}
+
+\begin{document}
+
+    % Front page
+    \input{papers/Cover.tex}
+    
+    % Index
+    \renewcommand{\contentsname}{Index}
+    \large{\tableofcontents}
+    
+    % Introduction
+    \input{papers/00Introduction.tex}
+    
+    % Papers
+    \input{papers/01CascadedSubpatch.tex}
+    \input{papers/02BuildingCorrelation.tex}
+    \input{papers/03SparseConnect.tex}
+    \input{papers/04ImprovingCNNPerformance.tex}
+    \input{papers/05RotationInvariant.tex}
+    \input{papers/06LowComplexityApproximate.tex}
+    \input{papers/07ConvolutionInConvolution.tex}
+    \input{papers/08GeneralizingPooling.tex}
+    \input{papers/09LowComplexityMAC.tex}
+    \input{papers/10StochasticNet.tex}
+    
+    % Conclusion
+    \input{papers/Conclusion.tex}
+    
+    % References
+    \input{papers/References.tex}
+
+\end{document}
