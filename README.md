@@ -5,7 +5,7 @@ In the following repository I'm going to share a report I have been working on f
 ## Survey Project on Convolutional Neural Networks
 ### Abstract
 
-The aim of the following report is to debate about the technology of *Convolutional Neural Networks* by collecting a number of papers published from 2015 until 2019 on most famous digital libraries. More specifically, ten papers will be presented and organized into chapters which contain different approaches to improve performances on the subject under examination. Each paper will be discussed and divided into two sections. The first one will deal with the proposed method, while the second one will cover experimental results and achievements.
+The aim of the following report is to debate about the technology of *Convolutional Neural Networks* by collecting a number of papers published from 2015 until 2019 on the most famous digital libraries. Ten papers are presented and organized into chapters which contain different approaches to improve the performance of such models. Each paper is discussed and divided into two sections. The first one deals with the proposed method, while the second one covers experimental results and achievements.
 
 ### Source
 
